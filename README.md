@@ -1,8 +1,4 @@
 <p align="center">
-  <img src=".github/assets/banner.png" width="800" alt="Praxist plugins" />
-</p>
-
-<p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome" /></a>
   <img src="https://img.shields.io/badge/praxist%20plugins-27-blueviolet" alt="Entry count" />
   <img src="https://img.shields.io/github/last-commit/ZeroPointRepo/awesome-praxist-plugins" alt="Last commit" />
