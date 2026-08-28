@@ -1,0 +1,637 @@
+{
+  "name": "Awesome Praxist plugins",
+  "url": "https://github.com/ZeroPointRepo/awesome-praxist-plugins",
+  "source": "https://raw.githubusercontent.com/ZeroPointRepo/awesome-praxist-plugins/main/plugins.json",
+  "updated": "2026-08-28",
+  "count": 26,
+  "categories": [
+    "agent_runtime",
+    "budget_policy",
+    "graph_maintainer",
+    "model_provider",
+    "panel_topology",
+    "tool_server",
+    "workflow_stage"
+  ],
+  "plugins": [
+    {
+      "name": "claude_sdk",
+      "owner": "sapientinc",
+      "url": "https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/agent_runtimes/claude_sdk",
+      "category": "agent_runtime",
+      "description": {
+        "en": "Claude SDK runtime adapter with AgentRunRequest execution, legacy BaseAgent compatibility, and redacted transcript conformance."
+      },
+      "stars": 898,
+      "added": "2026-08-28",
+      "praxist": {
+        "kind": "agent_runtime",
+        "version": "0.1.0",
+        "stability": "v1_stable",
+        "protocol_version": "1",
+        "praxist_core": ">=0.1.0,<1.0",
+        "entrypoint": true,
+        "tool_names": [],
+        "auth": "no key",
+        "auth_established": true
+      }
+    },
+    {
+      "name": "codex_sdk",
+      "owner": "sapientinc",
+      "url": "https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/agent_runtimes/codex_sdk",
+      "category": "agent_runtime",
+      "description": {
+        "en": "Official Codex Python SDK runtime using long-lived local app-server clients."
+      },
+      "stars": 898,
+      "added": "2026-08-28",
+      "praxist": {
+        "kind": "agent_runtime",
+        "version": "0.1.0",
+        "stability": "v1_stable",
+        "protocol_version": "1",
+        "praxist_core": ">=0.1.0,<1.0",
+        "entrypoint": true,
+        "tool_names": [],
+        "auth": "no key",
+        "auth_established": true
+      }
+    },
+    {
+      "name": "default_basic",
+      "owner": "sapientinc",
+      "url": "https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/budget_policies/default_basic",
+      "category": "budget_policy",
+      "description": {
+        "en": "Generic deterministic budget policy alias for internal smoke."
+      },
+      "stars": 898,
+      "added": "2026-08-28",
+      "praxist": {
+        "kind": "budget_policy",
+        "version": "0.1.0",
+        "stability": "v1_stable",
+        "protocol_version": "1",
+        "praxist_core": ">=0.1.0,<1.0",
+        "entrypoint": true,
+        "tool_names": [],
+        "auth": "no key",
+        "auth_established": true
+      }
+    },
+    {
+      "name": "finding_graph_mvp",
+      "owner": "sapientinc",
+      "url": "https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/graph_maintainers/finding_graph_mvp",
+      "category": "graph_maintainer",
+      "description": {
+        "en": "Compatibility descriptor for the existing finding graph guidance engine."
+      },
+      "stars": 898,
+      "added": "2026-08-28",
+      "praxist": {
+        "kind": "graph_maintainer",
+        "version": "0.1.0",
+        "stability": "experimental",
+        "protocol_version": "1",
+        "praxist_core": ">=0.1.0,<1.0",
+        "entrypoint": true,
+        "tool_names": [],
+        "auth": "no key",
+        "auth_established": true
+      }
+    },
+    {
+      "name": "anthropic_messages",
+      "owner": "sapientinc",
+      "url": "https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/model_providers/anthropic_messages",
+      "category": "model_provider",
+      "description": {
+        "en": "Anthropic messages provider adapter spec."
+      },
+      "stars": 898,
+      "added": "2026-08-28",
+      "praxist": {
+        "kind": "model_provider",
+        "version": "0.1.0",
+        "stability": "experimental",
+        "protocol_version": "1",
+        "praxist_core": ">=0.1.0,<1.0",
+        "entrypoint": true,
+        "tool_names": [],
+        "auth": "no key",
+        "auth_established": true
+      }
+    },
+    {
+      "name": "deepseek_alias",
+      "owner": "sapientinc",
+      "url": "https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/model_providers/deepseek_alias",
+      "category": "model_provider",
+      "description": {
+        "en": "DeepSeek alias on the OpenAI-compatible adapter path."
+      },
+      "stars": 898,
+      "added": "2026-08-28",
+      "praxist": {
+        "kind": "model_provider",
+        "version": "0.1.0",
+        "stability": "experimental",
+        "protocol_version": "1",
+        "praxist_core": ">=0.1.0,<1.0",
+        "entrypoint": true,
+        "tool_names": [],
+        "auth": "no key",
+        "auth_established": true
+      }
+    },
+    {
+      "name": "openai_compatible",
+      "owner": "sapientinc",
+      "url": "https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/model_providers/openai_compatible",
+      "category": "model_provider",
+      "description": {
+        "en": "OpenAI-compatible provider adapter spec."
+      },
+      "stars": 898,
+      "added": "2026-08-28",
+      "praxist": {
+        "kind": "model_provider",
+        "version": "0.1.0",
+        "stability": "experimental",
+        "protocol_version": "1",
+        "praxist_core": ">=0.1.0,<1.0",
+        "entrypoint": true,
+        "tool_names": [],
+        "auth": "no key",
+        "auth_established": true
+      }
+    },
+    {
+      "name": "openrouter",
+      "owner": "sapientinc",
+      "url": "https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/model_providers/openrouter",
+      "category": "model_provider",
+      "description": {
+        "en": "OpenRouter provider adapter spec."
+      },
+      "stars": 898,
+      "added": "2026-08-28",
+      "praxist": {
+        "kind": "model_provider",
+        "version": "0.1.0",
+        "stability": "experimental",
+        "protocol_version": "1",
+        "praxist_core": ">=0.1.0,<1.0",
+        "entrypoint": true,
+        "tool_names": [],
+        "auth": "no key",
+        "auth_established": true
+      }
+    },
+    {
+      "name": "legacy_multi_pi_two_round",
+      "owner": "sapientinc",
+      "url": "https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/panel_topologies/legacy_multi_pi_two_round",
+      "category": "panel_topology",
+      "description": {
+        "en": "Generic legacy-compatible Multi-PI topology: evidence pack, independent memos, anonymized cross-review, Chair agenda."
+      },
+      "stars": 898,
+      "added": "2026-08-28",
+      "praxist": {
+        "kind": "panel_topology",
+        "version": "0.1.0",
+        "stability": "v1_stable",
+        "protocol_version": "1",
+        "praxist_core": ">=0.1.0,<1.0",
+        "entrypoint": false,
+        "tool_names": [],
+        "auth": "no key",
+        "auth_established": true
+      }
+    },
+    {
+      "name": "arxiv",
+      "owner": "sapientinc",
+      "url": "https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/tools/arxiv",
+      "category": "tool_server",
+      "description": {
+        "en": "Provider-agnostic arxiv search + metadata MCP tools — Atom-XML over the public arxiv API (#128)."
+      },
+      "stars": 898,
+      "added": "2026-08-28",
+      "praxist": {
+        "kind": "tool_server",
+        "version": "0.1.0",
+        "stability": "experimental",
+        "protocol_version": "1",
+        "praxist_core": ">=0.1.0,<1.0",
+        "entrypoint": true,
+        "tool_names": [
+          "arxiv_search",
+          "arxiv_get",
+          "arxiv_recent"
+        ],
+        "auth": "no key",
+        "auth_established": true
+      }
+    },
+    {
+      "name": "brave_search",
+      "owner": "sapientinc",
+      "url": "https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/tools/brave_search",
+      "category": "tool_server",
+      "description": {
+        "en": "Provider-agnostic web_search MCP tool backed by Brave Search REST API (#109)."
+      },
+      "stars": 898,
+      "added": "2026-08-28",
+      "praxist": {
+        "kind": "tool_server",
+        "version": "0.1.0",
+        "stability": "experimental",
+        "protocol_version": "1",
+        "praxist_core": ">=0.1.0,<1.0",
+        "entrypoint": true,
+        "tool_names": [
+          "web_search"
+        ],
+        "auth": "BRAVE_API_KEY",
+        "auth_established": true
+      }
+    },
+    {
+      "name": "browser",
+      "owner": "sapientinc",
+      "url": "https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/tools/browser",
+      "category": "tool_server",
+      "description": {
+        "en": "Provider-agnostic web_read MCP tool — extract main text from a URL (#128)."
+      },
+      "stars": 898,
+      "added": "2026-08-28",
+      "praxist": {
+        "kind": "tool_server",
+        "version": "0.1.0",
+        "stability": "experimental",
+        "protocol_version": "1",
+        "praxist_core": ">=0.1.0,<1.0",
+        "entrypoint": true,
+        "tool_names": [
+          "web_read"
+        ],
+        "auth": "no key",
+        "auth_established": true
+      }
+    },
+    {
+      "name": "evaluation_tools",
+      "owner": "sapientinc",
+      "url": "https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/tools/evaluation_tools",
+      "category": "tool_server",
+      "description": {
+        "en": "Evaluation MCP tools for findings, metrics, and bounded task-owned file readiness."
+      },
+      "stars": 898,
+      "added": "2026-08-28",
+      "praxist": {
+        "kind": "tool_server",
+        "version": "0.1.0",
+        "stability": "experimental",
+        "protocol_version": "1",
+        "praxist_core": ">=0.1.0,<1.0",
+        "entrypoint": true,
+        "tool_names": [
+          "log_experiment_metrics",
+          "share_finding",
+          "get_leaderboard",
+          "wait_for_file",
+          "read_tool_result"
+        ],
+        "auth": "no key",
+        "auth_established": true
+      }
+    },
+    {
+      "name": "existing_mcp_tools_shim",
+      "owner": "sapientinc",
+      "url": "https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/tools/existing_mcp_tools_shim",
+      "category": "tool_server",
+      "description": {
+        "en": "Compatibility shim for existing evaluation/frontier/finding-graph/memory/prior-work MCP tool servers."
+      },
+      "stars": 898,
+      "added": "2026-08-28",
+      "praxist": {
+        "kind": "tool_server",
+        "version": "0.1.0",
+        "stability": "experimental",
+        "protocol_version": "1",
+        "praxist_core": ">=0.1.0,<1.0",
+        "entrypoint": false,
+        "tool_names": [],
+        "auth": "no key",
+        "auth_established": true
+      }
+    },
+    {
+      "name": "finding_graph_query",
+      "owner": "sapientinc",
+      "url": "https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/tools/finding_graph_query",
+      "category": "tool_server",
+      "description": {
+        "en": "Read-only finding graph query MCP surface for graph context and recent finding lookup."
+      },
+      "stars": 898,
+      "added": "2026-08-28",
+      "praxist": {
+        "kind": "tool_server",
+        "version": "0.1.0",
+        "stability": "experimental",
+        "protocol_version": "1",
+        "praxist_core": ">=0.1.0,<1.0",
+        "entrypoint": true,
+        "tool_names": [
+          "get_finding_neighbors",
+          "get_finding_subgraph",
+          "get_unlinked_recent_findings"
+        ],
+        "auth": "no key",
+        "auth_established": true
+      }
+    },
+    {
+      "name": "frontier_tools",
+      "owner": "sapientinc",
+      "url": "https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/tools/frontier_tools",
+      "category": "tool_server",
+      "description": {
+        "en": "Existing frontier MCP tools for leaderboard and frontier lookup."
+      },
+      "stars": 898,
+      "added": "2026-08-28",
+      "praxist": {
+        "kind": "tool_server",
+        "version": "0.1.0",
+        "stability": "experimental",
+        "protocol_version": "1",
+        "praxist_core": ">=0.1.0,<1.0",
+        "entrypoint": true,
+        "tool_names": [
+          "get_frontier"
+        ],
+        "auth": "no key",
+        "auth_established": true
+      }
+    },
+    {
+      "name": "literature_lookup",
+      "owner": "sapientinc",
+      "url": "https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/tools/literature_lookup",
+      "category": "tool_server",
+      "description": {
+        "en": "Generic no-key public literature/database/open-access lookup tools for peers, PI panels, and task-local scout roles."
+      },
+      "stars": 898,
+      "added": "2026-08-28",
+      "praxist": {
+        "kind": "tool_server",
+        "version": "0.1.0",
+        "stability": "experimental",
+        "protocol_version": "1",
+        "praxist_core": ">=0.1.0,<1.0",
+        "entrypoint": true,
+        "tool_names": [
+          "literature_search",
+          "literature_resolve",
+          "literature_source_guide",
+          "literature_open_access_text",
+          "scientific_database_search"
+        ],
+        "auth": "no key",
+        "auth_established": true
+      }
+    },
+    {
+      "name": "memory_tools",
+      "owner": "sapientinc",
+      "url": "https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/tools/memory_tools",
+      "category": "tool_server",
+      "description": {
+        "en": "Existing research-memory MCP tools for PI evidence-card and ledger queries."
+      },
+      "stars": 898,
+      "added": "2026-08-28",
+      "praxist": {
+        "kind": "tool_server",
+        "version": "0.1.0",
+        "stability": "experimental",
+        "protocol_version": "1",
+        "praxist_core": ">=0.1.0,<1.0",
+        "entrypoint": true,
+        "tool_names": [
+          "get_evidence_card",
+          "query_evidence_cards",
+          "query_coverage_matrix",
+          "list_active_claims",
+          "list_open_objections",
+          "get_ledger_entry",
+          "resolve_source_ref"
+        ],
+        "auth": "no key",
+        "auth_established": true
+      }
+    },
+    {
+      "name": "pdf_reader",
+      "owner": "sapientinc",
+      "url": "https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/tools/pdf_reader",
+      "category": "tool_server",
+      "description": {
+        "en": "PDF reader MCP tool — rasterize via poppler + OCR via tesseract for research papers (#128)."
+      },
+      "stars": 898,
+      "added": "2026-08-28",
+      "praxist": {
+        "kind": "tool_server",
+        "version": "0.1.0",
+        "stability": "experimental",
+        "protocol_version": "1",
+        "praxist_core": ">=0.1.0,<1.0",
+        "entrypoint": true,
+        "tool_names": [
+          "pdf_read",
+          "pdf_metadata"
+        ],
+        "auth": "no key",
+        "auth_established": true
+      }
+    },
+    {
+      "name": "prior_work_tools",
+      "owner": "sapientinc",
+      "url": "https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/tools/prior_work_tools",
+      "category": "tool_server",
+      "description": {
+        "en": "Existing prior-work MCP tools for downloading prior workspace snapshots from previous findings."
+      },
+      "stars": 898,
+      "added": "2026-08-28",
+      "praxist": {
+        "kind": "tool_server",
+        "version": "0.1.0",
+        "stability": "experimental",
+        "protocol_version": "1",
+        "praxist_core": ">=0.1.0,<1.0",
+        "entrypoint": true,
+        "tool_names": [
+          "download_snapshot"
+        ],
+        "auth": "no key",
+        "auth_established": true
+      }
+    },
+    {
+      "name": "run_report",
+      "owner": "sapientinc",
+      "url": "https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/tools/run_report",
+      "category": "tool_server",
+      "description": {
+        "en": "Generate human-readable Praxist run reports from canonical run artifacts."
+      },
+      "stars": 898,
+      "added": "2026-08-28",
+      "praxist": {
+        "kind": "tool_server",
+        "version": "0.1.0",
+        "stability": "experimental",
+        "protocol_version": "1",
+        "praxist_core": ">=0.1.0,<1.0",
+        "entrypoint": true,
+        "tool_names": [
+          "generate_run_report"
+        ],
+        "auth": "no key",
+        "auth_established": true
+      }
+    },
+    {
+      "name": "system",
+      "owner": "sapientinc",
+      "url": "https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/tools/system",
+      "category": "tool_server",
+      "description": {
+        "en": "Read-only system-state surfacing for roles that benefit from cross-run situational awareness."
+      },
+      "stars": 898,
+      "added": "2026-08-28",
+      "praxist": {
+        "kind": "tool_server",
+        "version": "0.1.0",
+        "stability": "experimental",
+        "protocol_version": "1",
+        "praxist_core": ">=0.1.0,<1.0",
+        "entrypoint": true,
+        "tool_names": [
+          "system_active_runs",
+          "system_run_summary",
+          "system_recent_findings",
+          "system_frontier_snapshot",
+          "system_recent_errors"
+        ],
+        "auth": "no key",
+        "auth_established": true
+      }
+    },
+    {
+      "name": "ideation_stub",
+      "owner": "sapientinc",
+      "url": "https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/workflow_stages/ideation_stub",
+      "category": "workflow_stage",
+      "description": {
+        "en": "Disabled-by-default ideation workflow stub."
+      },
+      "stars": 898,
+      "added": "2026-08-28",
+      "praxist": {
+        "kind": "workflow_stage",
+        "version": "0.1.0",
+        "stability": "v1_stable",
+        "protocol_version": "1",
+        "praxist_core": ">=0.1.0,<1.0",
+        "entrypoint": false,
+        "tool_names": [],
+        "auth": "no key",
+        "auth_established": true
+      }
+    },
+    {
+      "name": "paper_writing_stub",
+      "owner": "sapientinc",
+      "url": "https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/workflow_stages/paper_writing_stub",
+      "category": "workflow_stage",
+      "description": {
+        "en": "Disabled-by-default paper writing workflow stub."
+      },
+      "stars": 898,
+      "added": "2026-08-28",
+      "praxist": {
+        "kind": "workflow_stage",
+        "version": "0.1.0",
+        "stability": "v1_stable",
+        "protocol_version": "1",
+        "praxist_core": ">=0.1.0,<1.0",
+        "entrypoint": false,
+        "tool_names": [],
+        "auth": "no key",
+        "auth_established": true
+      }
+    },
+    {
+      "name": "research_loop",
+      "owner": "sapientinc",
+      "url": "https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/workflow_stages/research_loop",
+      "category": "workflow_stage",
+      "description": {
+        "en": "Required research loop workflow stage."
+      },
+      "stars": 898,
+      "added": "2026-08-28",
+      "praxist": {
+        "kind": "workflow_stage",
+        "version": "0.1.0",
+        "stability": "v1_stable",
+        "protocol_version": "1",
+        "praxist_core": ">=0.1.0,<1.0",
+        "entrypoint": true,
+        "tool_names": [],
+        "auth": "ANTHROPIC_API_KEY, ANTHROPIC_AUTH_TOKEN, DEEPSEEK_API_KEY, OPENAI_API_KEY, OPENROUTER_API_KEY",
+        "auth_established": true
+      }
+    },
+    {
+      "name": "reviewer_stub",
+      "owner": "sapientinc",
+      "url": "https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/workflow_stages/reviewer_stub",
+      "category": "workflow_stage",
+      "description": {
+        "en": "Disabled-by-default local reviewer stage for artifact/provenance consistency checks."
+      },
+      "stars": 898,
+      "added": "2026-08-28",
+      "praxist": {
+        "kind": "workflow_stage",
+        "version": "0.1.0",
+        "stability": "v1_stable",
+        "protocol_version": "1",
+        "praxist_core": ">=0.1.0,<1.0",
+        "entrypoint": false,
+        "tool_names": [],
+        "auth": "no key",
+        "auth_established": true
+      }
+    }
+  ]
+}

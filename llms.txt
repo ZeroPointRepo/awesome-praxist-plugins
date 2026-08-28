@@ -1,0 +1,51 @@
+# Praxist plugins
+
+> Curated directory of Praxist plugins, the extension format for Sapient Intelligence's autonomous research system. Every machine-readable column is read out of a plugin's own plugin.yaml manifest and its declared code files.
+
+This repository ships a curated page for people and generated layers for machines. Everything under
+"Generated data" is rewritten in full by the `refresh-catalog` workflow, Mondays at 08:00 UTC and
+on manual dispatch, from live sources rather than a committed snapshot. Editing those files by hand
+is pointless; they are overwritten.
+
+## Files
+
+- [README.md](https://raw.githubusercontent.com/ZeroPointRepo/awesome-praxist-plugins/main/README.md): the curated page, grouped by plugin kind, plus how to write and install a plugin of your own.
+- [CONTRIBUTING.md](https://raw.githubusercontent.com/ZeroPointRepo/awesome-praxist-plugins/main/CONTRIBUTING.md): the bar an entry has to clear and the exact format a new entry uses.
+
+## Generated data
+
+- [CATALOG.md](https://raw.githubusercontent.com/ZeroPointRepo/awesome-praxist-plugins/main/CATALOG.md): every Praxist plugin this repo can resolve, as markdown tables grouped by kind.
+- [catalog.csv](https://raw.githubusercontent.com/ZeroPointRepo/awesome-praxist-plugins/main/catalog.csv): the same rows as CSV. Header: `name,kind,repo,version,stability,protocol_version,praxist_core,entrypoint,tool_names,auth,auth_established,stars,url,added,description`. Read the header row; do not assume a column order. `tool_names` is semicolon separated and may be empty.
+- [plugins.json](https://raw.githubusercontent.com/ZeroPointRepo/awesome-praxist-plugins/main/plugins.json): the same rows as JSON. Top level: `name, url, source, updated, count, categories, plugins`. Per entry: `name, owner, url, category, description.en, stars, added`, plus a `praxist` object carrying `kind, version, stability, protocol_version, praxist_core, entrypoint, tool_names, auth, auth_established`. The live entry count is the top level `count` field and the as-of date is `updated`, which is why neither is restated anywhere in this file.
+- [.github/data/first-seen.json](https://raw.githubusercontent.com/ZeroPointRepo/awesome-praxist-plugins/main/.github/data/first-seen.json): the date this list first carried each entry. Cumulative and never back-dated, so a re-listed entry keeps its original date. It records when the list first carried something, not when that thing was created.
+
+## What the columns mean
+
+- An entry is included only when its `plugin.yaml` declares both a `kind` from the Praxist loader's kind set and a `compatibility.praxist_core` constraint. A repository that merely mentions Praxist is not an entry.
+- `kind` is one of twelve: `role`, `audit_rule`, `evaluation`, `panel_topology`, `agent_runtime`, `budget_policy`, `workflow_stage`, `tool_server`, `ontology`, `budget_unit`, `model_provider`, `graph_maintainer`.
+- `stability` is the interface contract the plugin declares, not a statement about whether it is safe to run. Trust in Praxist comes from a plugin's source root, not its stability tier.
+- `entrypoint` is true when the manifest declares an executable `module:function` factory. A manifest-only plugin is a contract with no code, which is normal for some kinds.
+- `auth` is derived by scanning the plugin's own declared `code` files for environment reads whose name looks like a credential. It reflects the code, not the description.
+- `auth_established: false` and the string `Not established` mean a declared code file could not be read on the last run. Do not collapse that into "needs no key" or into "needs a key". It is a third state and it is reported as one.
+- If more than 5% of candidate repository trees fail to resolve in a run, the generator aborts rather than publish a catalog that would read as "no third-party plugins exist". Absence of evidence is not published as evidence of absence.
+- This is a curated list, not a security audit. A row says the manifest resolves and parses, not that the code has been reviewed.
+
+## How an agent should use this list
+
+1. For the complete machine-readable set in one request, fetch `plugins.json`. For tabular work or citation, fetch `catalog.csv`. Both are single files and neither is paginated.
+2. For a recommendation to a person, read `README.md`. It is the only layer where entries are curated rather than merely resolvable.
+3. Report the `updated` field from `plugins.json` as the as-of date alongside any claim taken from here.
+4. A Praxist plugin is a directory, not a package. There is no `praxist plugin install` command. Do not invent one, and do not present a repository URL as an install command.
+5. Only two of Praxist's four plugin roots execute in a run: `<task>/.praxist/plugins/` and the bundled root inside the install. Do not tell a person to put a third-party plugin in `~/.praxist/plugins/` or in the current directory, because the loader discovers those and then filters them out.
+6. Carry the third state through to the person. Do not present `auth_established: false` as "no key needed".
+7. Ask the person before installing anything or handing it credentials. Do not invent credentials, endpoints, licences or author attribution.
+8. To add or correct an entry, open a pull request. The generated layers are rebuilt from live sources, so a change made in them is discarded. There is no write API and nothing here accepts a direct push.
+
+## Provenance
+
+- Canonical repository: https://github.com/ZeroPointRepo/awesome-praxist-plugins
+- Raw base for every path above: https://raw.githubusercontent.com/ZeroPointRepo/awesome-praxist-plugins/main/
+- Upstream project this list covers: https://github.com/sapientinc/PRAXIST and https://praxist.sapient.inc/en/docs
+- Praxist itself ships under a Fair Source License, not an OSI-approved open source licence. Check it before building on it.
+- List content is licensed CC BY 4.0. Every linked project carries its own separate licence.
+- Unofficial and community maintained. Not affiliated with or endorsed by the Praxist project or its maintainers.

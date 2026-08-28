@@ -1,0 +1,67 @@
+name: refresh-catalog
+
+on:
+  schedule:
+    - cron: "0 8 * * 1" # Mondays 08:00 UTC, ahead of the weekly maintenance pass
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - README.md
+      - .github/scripts/build-catalog.mjs
+      - .github/workflows/refresh-catalog.yml
+
+permissions:
+  contents: write
+
+jobs:
+  catalog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild CATALOG.md, catalog.csv and plugins.json
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node .github/scripts/build-catalog.mjs
+
+      - name: Commit the refreshed catalog
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          TRACKED="CATALOG.md catalog.csv plugins.json README.md .github/data/first-seen.json"
+          if git diff --quiet -- $TRACKED; then
+            echo "No catalog change."
+            exit 0
+          fi
+          git add $TRACKED
+          git commit -m "chore: refresh catalog [skip ci]"
+          # Two runs can finish at once (the weekly cron, a push, a manual dispatch). Rebasing does
+          # not work here: both runs rewrite the same generated files, so the rebase stops on a
+          # content conflict every time. These files are pure output, so the loser replays its own
+          # copy on top of whatever landed first. README.md is hand-written, so only the one
+          # generated count line is re-applied, never the whole file.
+          for i in 1 2 3; do
+            git push && exit 0
+            git fetch origin main
+            tmp=$(mktemp -d)
+            cp CATALOG.md catalog.csv plugins.json .github/data/first-seen.json "$tmp"/
+            git reset --hard origin/main
+            # A first-seen date is only ever wrong in the "too late" direction, so keep the earlier.
+            node -e '
+              const fs=require("fs"), a=process.argv[1], b=process.argv[2];
+              const rd=p=>{try{return JSON.parse(fs.readFileSync(p,"utf8"))}catch{return{entries:{}}}};
+              const mine=rd(a), theirs=rd(b), seen={...theirs.entries};
+              for(const [k,v] of Object.entries(mine.entries||{})) if(!seen[k]||v<seen[k]) seen[k]=v;
+              mine.entries=Object.fromEntries(Object.entries(seen).sort(([x],[y])=>x.localeCompare(y)));
+              fs.writeFileSync(b, JSON.stringify(mine,null,2)+"\n");
+            ' "$tmp/first-seen.json" .github/data/first-seen.json
+            cp "$tmp"/CATALOG.md "$tmp"/catalog.csv "$tmp"/plugins.json .
+            count=$(grep -c '^| \[' CATALOG.md)
+            sed -i -E "s/^(- \*\*Full catalog:\*\* every verified .* \()[0-9]+(\) in .*)$/\1${count}\2/" README.md
+            git add $TRACKED
+            git diff --cached --quiet && exit 0
+            git commit -m "chore: refresh catalog [skip ci]"
+          done
+          git push

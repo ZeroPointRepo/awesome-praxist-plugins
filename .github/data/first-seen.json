@@ -1,0 +1,31 @@
+{
+  "_note": "When this list first carried each entry, not when the entry was created. Cumulative and never back-dated: an entry that drops out keeps its date. Generator owned, do not hand edit.",
+  "entries": {
+    "sapientinc/PRAXIST#agent_runtime:claude_sdk": "2026-08-28",
+    "sapientinc/PRAXIST#agent_runtime:codex_sdk": "2026-08-28",
+    "sapientinc/PRAXIST#budget_policy:default_basic": "2026-08-28",
+    "sapientinc/PRAXIST#graph_maintainer:finding_graph_mvp": "2026-08-28",
+    "sapientinc/PRAXIST#model_provider:anthropic_messages": "2026-08-28",
+    "sapientinc/PRAXIST#model_provider:deepseek_alias": "2026-08-28",
+    "sapientinc/PRAXIST#model_provider:openai_compatible": "2026-08-28",
+    "sapientinc/PRAXIST#model_provider:openrouter": "2026-08-28",
+    "sapientinc/PRAXIST#panel_topology:legacy_multi_pi_two_round": "2026-08-28",
+    "sapientinc/PRAXIST#tool_server:arxiv": "2026-08-28",
+    "sapientinc/PRAXIST#tool_server:brave_search": "2026-08-28",
+    "sapientinc/PRAXIST#tool_server:browser": "2026-08-28",
+    "sapientinc/PRAXIST#tool_server:evaluation_tools": "2026-08-28",
+    "sapientinc/PRAXIST#tool_server:existing_mcp_tools_shim": "2026-08-28",
+    "sapientinc/PRAXIST#tool_server:finding_graph_query": "2026-08-28",
+    "sapientinc/PRAXIST#tool_server:frontier_tools": "2026-08-28",
+    "sapientinc/PRAXIST#tool_server:literature_lookup": "2026-08-28",
+    "sapientinc/PRAXIST#tool_server:memory_tools": "2026-08-28",
+    "sapientinc/PRAXIST#tool_server:pdf_reader": "2026-08-28",
+    "sapientinc/PRAXIST#tool_server:prior_work_tools": "2026-08-28",
+    "sapientinc/PRAXIST#tool_server:run_report": "2026-08-28",
+    "sapientinc/PRAXIST#tool_server:system": "2026-08-28",
+    "sapientinc/PRAXIST#workflow_stage:ideation_stub": "2026-08-28",
+    "sapientinc/PRAXIST#workflow_stage:paper_writing_stub": "2026-08-28",
+    "sapientinc/PRAXIST#workflow_stage:research_loop": "2026-08-28",
+    "sapientinc/PRAXIST#workflow_stage:reviewer_stub": "2026-08-28"
+  }
+}
