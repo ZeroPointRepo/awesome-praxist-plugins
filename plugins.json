@@ -3,7 +3,7 @@
   "url": "https://github.com/ZeroPointRepo/awesome-praxist-plugins",
   "source": "https://raw.githubusercontent.com/ZeroPointRepo/awesome-praxist-plugins/main/plugins.json",
   "updated": "2026-08-28",
-  "count": 26,
+  "count": 27,
   "categories": [
     "agent_runtime",
     "budget_policy",
@@ -542,6 +542,33 @@
           "system_recent_errors"
         ],
         "auth": "no key",
+        "auth_established": true
+      }
+    },
+    {
+      "name": "transcriptapi",
+      "owner": "ZeroPointRepo",
+      "url": "https://github.com/ZeroPointRepo/transcriptapi-praxist-plugin",
+      "category": "tool_server",
+      "description": {
+        "en": "YouTube transcript, search, and channel tools for Praxist research agents, backed by the TranscriptAPI REST API."
+      },
+      "stars": 0,
+      "added": "2026-08-28",
+      "praxist": {
+        "kind": "tool_server",
+        "version": "0.1.0",
+        "stability": "v0_experimental",
+        "protocol_version": "1",
+        "praxist_core": ">=0.1.0,<1.0",
+        "entrypoint": true,
+        "tool_names": [
+          "youtube_transcript",
+          "youtube_search",
+          "youtube_video_info",
+          "youtube_channel_videos"
+        ],
+        "auth": "TRANSCRIPTAPI_KEY",
         "auth_established": true
       }
     },

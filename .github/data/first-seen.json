@@ -26,6 +26,7 @@
     "sapientinc/PRAXIST#workflow_stage:ideation_stub": "2026-08-28",
     "sapientinc/PRAXIST#workflow_stage:paper_writing_stub": "2026-08-28",
     "sapientinc/PRAXIST#workflow_stage:research_loop": "2026-08-28",
-    "sapientinc/PRAXIST#workflow_stage:reviewer_stub": "2026-08-28"
+    "sapientinc/PRAXIST#workflow_stage:reviewer_stub": "2026-08-28",
+    "ZeroPointRepo/transcriptapi-praxist-plugin#tool_server:transcriptapi": "2026-08-28"
   }
 }

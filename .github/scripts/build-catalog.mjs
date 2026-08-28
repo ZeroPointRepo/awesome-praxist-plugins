@@ -193,9 +193,11 @@ function manifestToRow(text, { repo, path }) {
   const praxistCore = flat['compatibility.praxist_core'];
   // The check: a real Praxist plugin declares a known kind AND a core compatibility constraint.
   if (!kind || !KINDS.has(kind) || !praxistCore) return null;
-  const dir = path.replace(/\/plugin\.yaml$/, '');
+  // A manifest at the repo root is `plugin.yaml` with no leading slash, which must reduce to an
+  // empty dir rather than to the literal string "plugin.yaml".
+  const dir = path.replace(/(^|\/)plugin\.yaml$/, '');
   return {
-    name: flat.name || dir.split('/').pop(),
+    name: flat.name || dir.split('/').pop() || repo.split('/')[1],
     kind,
     version: flat.version || '',
     stability: flat.stability || '',
@@ -208,7 +210,7 @@ function manifestToRow(text, { repo, path }) {
     repo,
     owner: repo.split('/')[0],
     dir,
-    url: `https://github.com/${repo}/tree/HEAD/${dir}`,
+    url: dir ? `https://github.com/${repo}/tree/HEAD/${dir}` : `https://github.com/${repo}`,
   };
 }
 
@@ -223,7 +225,10 @@ async function deriveAuth(row) {
   let failed = 0;
   for (const rel of row.code) {
     if (rel.includes('*')) continue;
-    const text = await api(`/repos/${row.repo}/contents/${row.dir}/${rel}`, { raw: true }).catch(
+    // A manifest at the repo root gives dir === '', and a naive join would produce a double
+    // slash that 404s and then reports as "Not established". Join deliberately.
+    const filePath = row.dir ? `${row.dir}/${rel}` : rel;
+    const text = await api(`/repos/${row.repo}/contents/${filePath}`, { raw: true }).catch(
       () => null,
     );
     if (text == null) {
@@ -420,10 +425,16 @@ async function main() {
   const readmePath = 'README.md';
   if (existsSync(readmePath)) {
     const readme = readFileSync(readmePath, 'utf8');
-    const next = readme.replace(
-      /(<!-- catalog-count:start -->)[\s\S]*?(<!-- catalog-count:end -->)/,
-      `$1\n- **Full catalog:** every verified ${NOUN} (${withAuth.length}) in [CATALOG.md](CATALOG.md)\n$2`,
-    );
+    const next = readme
+      .replace(
+        /(<!-- catalog-count:start -->)[\s\S]*?(<!-- catalog-count:end -->)/,
+        `$1\n- **Full catalog:** every verified ${NOUN} (${withAuth.length}) in [CATALOG.md](CATALOG.md)\n$2`,
+      )
+      // The count badge is a number, so it is generator owned too and never hand edited.
+      .replace(
+        /(img\.shields\.io\/badge\/praxist%20plugins-)\d+(-blueviolet)/,
+        `$1${withAuth.length}$2`,
+      );
     if (next !== readme) writeFileSync(readmePath, next);
   }
 

@@ -1,6 +1,6 @@
 # Praxist plugins catalog
 
-26 Praxist plugins: 26 shipped in sapientinc/PRAXIST and 0 from the wider ecosystem. Every column is read out of the plugin's own `plugin.yaml` manifest and its declared code files.
+27 Praxist plugins: 26 shipped in sapientinc/PRAXIST and 1 from the wider ecosystem. Every column is read out of the plugin's own `plugin.yaml` manifest and its declared code files.
 
 Rebuilt by `.github/scripts/build-catalog.mjs`. Do not edit by hand.
 
@@ -40,7 +40,7 @@ Rebuilt by `.github/scripts/build-catalog.mjs`. Do not edit by hand.
 |---|---|---|---|---|---|---|---|
 | [legacy_multi_pi_two_round](https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/panel_topologies/legacy_multi_pi_two_round) | sapientinc/PRAXIST | 0.1.0 | v1_stable | — | — | no key | 2026-08-28 |
 
-## tool_server (13)
+## tool_server (14)
 
 | Praxist plugin | Repo | Version | Stability | Entrypoint | Tools | Auth | First listed |
 |---|---|---|---|---|---|---|---|
@@ -57,6 +57,7 @@ Rebuilt by `.github/scripts/build-catalog.mjs`. Do not edit by hand.
 | [prior_work_tools](https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/tools/prior_work_tools) | sapientinc/PRAXIST | 0.1.0 | experimental | ✅ | download_snapshot | no key | 2026-08-28 |
 | [run_report](https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/tools/run_report) | sapientinc/PRAXIST | 0.1.0 | experimental | ✅ | generate_run_report | no key | 2026-08-28 |
 | [system](https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/tools/system) | sapientinc/PRAXIST | 0.1.0 | experimental | ✅ | system_active_runs, system_run_summary, system_recent_findings, system_frontier_snapshot, system_recent_errors | no key | 2026-08-28 |
+| [transcriptapi](https://github.com/ZeroPointRepo/transcriptapi-praxist-plugin) | ZeroPointRepo/transcriptapi-praxist-plugin | 0.1.0 | v0_experimental | ✅ | youtube_transcript, youtube_search, youtube_video_info, youtube_channel_videos | TRANSCRIPTAPI_KEY | 2026-08-28 |
 
 ## workflow_stage (4)
 

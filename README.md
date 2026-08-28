@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome" /></a>
-  <img src="https://img.shields.io/badge/praxist%20plugins-26-blueviolet" alt="Entry count" />
+  <img src="https://img.shields.io/badge/praxist%20plugins-27-blueviolet" alt="Entry count" />
   <img src="https://img.shields.io/github/last-commit/ZeroPointRepo/awesome-praxist-plugins" alt="Last commit" />
   <img src="https://img.shields.io/badge/praxist-v0.5.0-informational" alt="Upstream version" />
   <img src="https://img.shields.io/badge/status-unofficial-lightgrey" alt="Unofficial" />
@@ -27,7 +27,7 @@
 - [Good to know](#good-to-know)
 
 <!-- catalog-count:start -->
-- **Full catalog:** every verified Praxist plugin (26) in [CATALOG.md](CATALOG.md)
+- **Full catalog:** every verified Praxist plugin (27) in [CATALOG.md](CATALOG.md)
 <!-- catalog-count:end -->
 - **Machine-readable:** the same rows as data in [catalog.csv](catalog.csv) and [plugins.json](plugins.json)
 
@@ -89,6 +89,23 @@ Install an example task project you can drop a plugin into:
 praxist examples install rocket_booster_recovery
 ```
 
+## ⭐ Featured plugin
+
+**[transcriptapi](https://github.com/ZeroPointRepo/transcriptapi-praxist-plugin)** by
+[ZeroPointRepo](https://github.com/ZeroPointRepo) pulls evidence out of video: transcripts, search,
+video metadata, and channel uploads, as four tools on a `tool_server`. Useful when the finding you
+need is in a conference talk or a lecture rather than a paper. `tool_server`, needs
+`TRANSCRIPTAPI_KEY`, free tier.
+
+<details>
+<summary>Install</summary>
+
+```bash
+git clone https://github.com/ZeroPointRepo/transcriptapi-praxist-plugin.git <your-task>/.praxist/plugins/tools/transcriptapi
+```
+
+</details>
+
 ## The catalog
 
 ### Tool Servers
@@ -140,8 +157,9 @@ praxist examples install rocket_booster_recovery
 
 ### Community Plugins
 
-Nothing here yet. Praxist shipped on 2026-08-27 and no third-party plugin has been published so
-far, so this section stays honestly empty rather than padded. If you have built one,
+- **Pull evidence out of video, not just papers** with [transcriptapi](https://github.com/ZeroPointRepo/transcriptapi-praxist-plugin) by [ZeroPointRepo](https://github.com/ZeroPointRepo). `tool_server` · v0_experimental · entrypoint · 4 tools: `youtube_transcript`, `youtube_search`, `youtube_video_info`, `youtube_channel_videos` · needs `TRANSCRIPTAPI_KEY`.
+
+Praxist shipped on 2026-08-27, so this section is nearly new. If you have built a plugin,
 [open an issue](https://github.com/ZeroPointRepo/awesome-praxist-plugins/issues/new?template=add-entry.yml)
 and it goes in.
 
