@@ -2,7 +2,7 @@
   "name": "Awesome Praxist plugins",
   "url": "https://github.com/ZeroPointRepo/awesome-praxist-plugins",
   "source": "https://raw.githubusercontent.com/ZeroPointRepo/awesome-praxist-plugins/main/plugins.json",
-  "updated": "2026-08-28",
+  "updated": "2026-08-31",
   "count": 27,
   "categories": [
     "agent_runtime",
@@ -22,7 +22,7 @@
       "description": {
         "en": "Claude SDK runtime adapter with AgentRunRequest execution, legacy BaseAgent compatibility, and redacted transcript conformance."
       },
-      "stars": 898,
+      "stars": 4815,
       "added": "2026-08-28",
       "praxist": {
         "kind": "agent_runtime",
@@ -44,7 +44,7 @@
       "description": {
         "en": "Official Codex Python SDK runtime using long-lived local app-server clients."
       },
-      "stars": 898,
+      "stars": 4815,
       "added": "2026-08-28",
       "praxist": {
         "kind": "agent_runtime",
@@ -66,7 +66,7 @@
       "description": {
         "en": "Generic deterministic budget policy alias for internal smoke."
       },
-      "stars": 898,
+      "stars": 4815,
       "added": "2026-08-28",
       "praxist": {
         "kind": "budget_policy",
@@ -88,7 +88,7 @@
       "description": {
         "en": "Compatibility descriptor for the existing finding graph guidance engine."
       },
-      "stars": 898,
+      "stars": 4815,
       "added": "2026-08-28",
       "praxist": {
         "kind": "graph_maintainer",
@@ -110,7 +110,7 @@
       "description": {
         "en": "Anthropic messages provider adapter spec."
       },
-      "stars": 898,
+      "stars": 4815,
       "added": "2026-08-28",
       "praxist": {
         "kind": "model_provider",
@@ -132,7 +132,7 @@
       "description": {
         "en": "DeepSeek alias on the OpenAI-compatible adapter path."
       },
-      "stars": 898,
+      "stars": 4815,
       "added": "2026-08-28",
       "praxist": {
         "kind": "model_provider",
@@ -154,7 +154,7 @@
       "description": {
         "en": "OpenAI-compatible provider adapter spec."
       },
-      "stars": 898,
+      "stars": 4815,
       "added": "2026-08-28",
       "praxist": {
         "kind": "model_provider",
@@ -176,7 +176,7 @@
       "description": {
         "en": "OpenRouter provider adapter spec."
       },
-      "stars": 898,
+      "stars": 4815,
       "added": "2026-08-28",
       "praxist": {
         "kind": "model_provider",
@@ -198,7 +198,7 @@
       "description": {
         "en": "Generic legacy-compatible Multi-PI topology: evidence pack, independent memos, anonymized cross-review, Chair agenda."
       },
-      "stars": 898,
+      "stars": 4815,
       "added": "2026-08-28",
       "praxist": {
         "kind": "panel_topology",
@@ -220,7 +220,7 @@
       "description": {
         "en": "Provider-agnostic arxiv search + metadata MCP tools — Atom-XML over the public arxiv API (#128)."
       },
-      "stars": 898,
+      "stars": 4815,
       "added": "2026-08-28",
       "praxist": {
         "kind": "tool_server",
@@ -246,7 +246,7 @@
       "description": {
         "en": "Provider-agnostic web_search MCP tool backed by Brave Search REST API (#109)."
       },
-      "stars": 898,
+      "stars": 4815,
       "added": "2026-08-28",
       "praxist": {
         "kind": "tool_server",
@@ -270,7 +270,7 @@
       "description": {
         "en": "Provider-agnostic web_read MCP tool — extract main text from a URL (#128)."
       },
-      "stars": 898,
+      "stars": 4815,
       "added": "2026-08-28",
       "praxist": {
         "kind": "tool_server",
@@ -294,7 +294,7 @@
       "description": {
         "en": "Evaluation MCP tools for findings, metrics, and bounded task-owned file readiness."
       },
-      "stars": 898,
+      "stars": 4815,
       "added": "2026-08-28",
       "praxist": {
         "kind": "tool_server",
@@ -322,7 +322,7 @@
       "description": {
         "en": "Compatibility shim for existing evaluation/frontier/finding-graph/memory/prior-work MCP tool servers."
       },
-      "stars": 898,
+      "stars": 4815,
       "added": "2026-08-28",
       "praxist": {
         "kind": "tool_server",
@@ -344,7 +344,7 @@
       "description": {
         "en": "Read-only finding graph query MCP surface for graph context and recent finding lookup."
       },
-      "stars": 898,
+      "stars": 4815,
       "added": "2026-08-28",
       "praxist": {
         "kind": "tool_server",
@@ -370,7 +370,7 @@
       "description": {
         "en": "Existing frontier MCP tools for leaderboard and frontier lookup."
       },
-      "stars": 898,
+      "stars": 4815,
       "added": "2026-08-28",
       "praxist": {
         "kind": "tool_server",
@@ -394,7 +394,7 @@
       "description": {
         "en": "Generic no-key public literature/database/open-access lookup tools for peers, PI panels, and task-local scout roles."
       },
-      "stars": 898,
+      "stars": 4815,
       "added": "2026-08-28",
       "praxist": {
         "kind": "tool_server",
@@ -422,7 +422,7 @@
       "description": {
         "en": "Existing research-memory MCP tools for PI evidence-card and ledger queries."
       },
-      "stars": 898,
+      "stars": 4815,
       "added": "2026-08-28",
       "praxist": {
         "kind": "tool_server",
@@ -452,7 +452,7 @@
       "description": {
         "en": "PDF reader MCP tool — rasterize via poppler + OCR via tesseract for research papers (#128)."
       },
-      "stars": 898,
+      "stars": 4815,
       "added": "2026-08-28",
       "praxist": {
         "kind": "tool_server",
@@ -477,7 +477,7 @@
       "description": {
         "en": "Existing prior-work MCP tools for downloading prior workspace snapshots from previous findings."
       },
-      "stars": 898,
+      "stars": 4815,
       "added": "2026-08-28",
       "praxist": {
         "kind": "tool_server",
@@ -501,7 +501,7 @@
       "description": {
         "en": "Generate human-readable Praxist run reports from canonical run artifacts."
       },
-      "stars": 898,
+      "stars": 4815,
       "added": "2026-08-28",
       "praxist": {
         "kind": "tool_server",
@@ -525,7 +525,7 @@
       "description": {
         "en": "Read-only system-state surfacing for roles that benefit from cross-run situational awareness."
       },
-      "stars": 898,
+      "stars": 4815,
       "added": "2026-08-28",
       "praxist": {
         "kind": "tool_server",
@@ -553,7 +553,7 @@
       "description": {
         "en": "YouTube transcript, search, and channel tools for Praxist research agents, backed by the TranscriptAPI REST API."
       },
-      "stars": 0,
+      "stars": 2,
       "added": "2026-08-28",
       "praxist": {
         "kind": "tool_server",
@@ -580,7 +580,7 @@
       "description": {
         "en": "Disabled-by-default ideation workflow stub."
       },
-      "stars": 898,
+      "stars": 4815,
       "added": "2026-08-28",
       "praxist": {
         "kind": "workflow_stage",
@@ -602,7 +602,7 @@
       "description": {
         "en": "Disabled-by-default paper writing workflow stub."
       },
-      "stars": 898,
+      "stars": 4815,
       "added": "2026-08-28",
       "praxist": {
         "kind": "workflow_stage",
@@ -624,7 +624,7 @@
       "description": {
         "en": "Required research loop workflow stage."
       },
-      "stars": 898,
+      "stars": 4815,
       "added": "2026-08-28",
       "praxist": {
         "kind": "workflow_stage",
@@ -646,7 +646,7 @@
       "description": {
         "en": "Disabled-by-default local reviewer stage for artifact/provenance consistency checks."
       },
-      "stars": 898,
+      "stars": 4815,
       "added": "2026-08-28",
       "praxist": {
         "kind": "workflow_stage",

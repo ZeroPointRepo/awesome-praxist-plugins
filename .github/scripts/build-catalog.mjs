@@ -263,7 +263,28 @@ async function treeManifests(repo) {
       rows.push({ ...row, stars: meta.stargazers_count, archived: meta.archived, fork: meta.fork });
     }
   }
-  return { ok: true, rows, meta, truncated: Boolean(tree.truncated) };
+  const allPaths = tree.tree.filter((n) => n.type === 'blob').map((n) => n.path);
+  return { ok: true, rows, meta, allPaths, truncated: Boolean(tree.truncated) };
+}
+
+// A verbatim re-upload of upstream is not an entry. It is not caught by the fork
+// filter, because re-uploading (rather than forking) leaves `fork: false`, and it is
+// not caught by DENY_OWNERS, because the owner is new every time. So test it
+// structurally: a candidate whose file tree is almost entirely upstream's file tree,
+// with nothing of its own, is a mirror.
+//
+// Real case, 2026-08-31: mcebomathibela8-eng/R-D, created 2026-08-30 by an account
+// created 2026-08-29, 5853 of 5853 paths identical to sapientinc/PRAXIST, zero unique
+// files. It would have published 27 mirror rows and reported the ecosystem as having
+// formed third-party plugins when it has not. Same class as Kharisma1980/ApodexAI on
+// awesome-frontieragent, which is denied there by name; this is the general form.
+const MIRROR_MIN_PATHS = 50;
+const MIRROR_OVERLAP = 0.95;
+function isMirrorOf(candidatePaths, upstreamPathSet) {
+  if (!candidatePaths || candidatePaths.length < MIRROR_MIN_PATHS) return false;
+  let shared = 0;
+  for (const p of candidatePaths) if (upstreamPathSet.has(p)) shared += 1;
+  return shared / candidatePaths.length >= MIRROR_OVERLAP;
 }
 
 async function main() {
@@ -293,9 +314,15 @@ async function main() {
   const candidates = [...seen.keys()].slice(0, MAX_CANDIDATES);
   console.log(`third-party candidates to check: ${candidates.length}`);
 
+  const upstreamPathSet = new Set(upstream.allPaths || []);
+  const mirrors = [];
   let unresolved = 0;
   const thirdPartyNested = await mapLimit(candidates, CONCURRENCY, async (repo) => {
     const r = await treeManifests(repo).catch(() => ({ ok: false, rows: [] }));
+    if (r.ok && isMirrorOf(r.allPaths, upstreamPathSet)) {
+      mirrors.push(repo);
+      return [];
+    }
     if (!r.ok) {
       unresolved += 1;
       return [];
@@ -307,6 +334,9 @@ async function main() {
   const failRate = candidates.length ? unresolved / candidates.length : 0;
   console.log(`third-party manifests found: ${thirdParty.length}`);
   console.log(`unresolved candidate trees: ${unresolved} (${(failRate * 100).toFixed(1)}%)`);
+  if (mirrors.length) {
+    console.log(`dropped ${mirrors.length} verbatim re-upload(s) of ${UPSTREAM}: ${mirrors.join(', ')}`);
+  }
   if (failRate > MAX_FAIL_RATE) {
     throw new Error(
       `unresolved rate ${(failRate * 100).toFixed(1)}% exceeds ${(MAX_FAIL_RATE * 100).toFixed(0)}%, ` +
