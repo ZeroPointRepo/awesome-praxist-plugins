@@ -54,6 +54,11 @@
     "mcebomathibela8-eng/R-D#workflow_stage:ideation_stub": "2026-08-31",
     "mcebomathibela8-eng/R-D#workflow_stage:paper_writing_stub": "2026-08-31",
     "mcebomathibela8-eng/R-D#workflow_stage:research_loop": "2026-08-31",
-    "mcebomathibela8-eng/R-D#workflow_stage:reviewer_stub": "2026-08-31"
+    "mcebomathibela8-eng/R-D#workflow_stage:reviewer_stub": "2026-08-31",
+    "sapientinc/PRAXIST#model_provider:cloudflare": "2026-09-21",
+    "sapientinc/PRAXIST#model_provider:groq_alias": "2026-09-21",
+    "sapientinc/PRAXIST#model_provider:mistral_alias": "2026-09-21",
+    "sapientinc/PRAXIST#model_provider:orcarouter": "2026-09-21",
+    "sapientinc/PRAXIST#model_provider:xai_alias": "2026-09-21"
   }
 }

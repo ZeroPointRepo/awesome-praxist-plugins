@@ -1,6 +1,6 @@
 # Praxist plugins catalog
 
-27 Praxist plugins: 26 shipped in sapientinc/PRAXIST and 1 from the wider ecosystem. Every column is read out of the plugin's own `plugin.yaml` manifest and its declared code files.
+32 Praxist plugins: 31 shipped in sapientinc/PRAXIST and 1 from the wider ecosystem. Every column is read out of the plugin's own `plugin.yaml` manifest and its declared code files.
 
 Rebuilt by `.github/scripts/build-catalog.mjs`. Do not edit by hand.
 
@@ -25,14 +25,19 @@ Rebuilt by `.github/scripts/build-catalog.mjs`. Do not edit by hand.
 |---|---|---|---|---|---|---|---|
 | [finding_graph_mvp](https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/graph_maintainers/finding_graph_mvp) | sapientinc/PRAXIST | 0.1.0 | experimental | ✅ | — | no key | 2026-08-28 |
 
-## model_provider (4)
+## model_provider (9)
 
 | Praxist plugin | Repo | Version | Stability | Entrypoint | Tools | Auth | First listed |
 |---|---|---|---|---|---|---|---|
 | [anthropic_messages](https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/model_providers/anthropic_messages) | sapientinc/PRAXIST | 0.1.0 | experimental | ✅ | — | no key | 2026-08-28 |
+| [cloudflare](https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/model_providers/cloudflare) | sapientinc/PRAXIST | 0.1.0 | experimental | ✅ | — | no key | 2026-09-21 |
 | [deepseek_alias](https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/model_providers/deepseek_alias) | sapientinc/PRAXIST | 0.1.0 | experimental | ✅ | — | no key | 2026-08-28 |
+| [groq_alias](https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/model_providers/groq_alias) | sapientinc/PRAXIST | 0.1.0 | experimental | ✅ | — | no key | 2026-09-21 |
+| [mistral_alias](https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/model_providers/mistral_alias) | sapientinc/PRAXIST | 0.1.0 | experimental | ✅ | — | no key | 2026-09-21 |
 | [openai_compatible](https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/model_providers/openai_compatible) | sapientinc/PRAXIST | 0.1.0 | experimental | ✅ | — | no key | 2026-08-28 |
 | [openrouter](https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/model_providers/openrouter) | sapientinc/PRAXIST | 0.1.0 | experimental | ✅ | — | no key | 2026-08-28 |
+| [orcarouter](https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/model_providers/orcarouter) | sapientinc/PRAXIST | 0.1.0 | experimental | ✅ | — | no key | 2026-09-21 |
+| [xai_alias](https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/model_providers/xai_alias) | sapientinc/PRAXIST | 0.1.0 | experimental | ✅ | — | no key | 2026-09-21 |
 
 ## panel_topology (1)
 
@@ -65,6 +70,6 @@ Rebuilt by `.github/scripts/build-catalog.mjs`. Do not edit by hand.
 |---|---|---|---|---|---|---|---|
 | [ideation_stub](https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/workflow_stages/ideation_stub) | sapientinc/PRAXIST | 0.1.0 | v1_stable | — | — | no key | 2026-08-28 |
 | [paper_writing_stub](https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/workflow_stages/paper_writing_stub) | sapientinc/PRAXIST | 0.1.0 | v1_stable | — | — | no key | 2026-08-28 |
-| [research_loop](https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/workflow_stages/research_loop) | sapientinc/PRAXIST | 0.1.0 | v1_stable | ✅ | — | ANTHROPIC_API_KEY, ANTHROPIC_AUTH_TOKEN, DEEPSEEK_API_KEY, OPENAI_API_KEY, OPENROUTER_API_KEY | 2026-08-28 |
+| [research_loop](https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/workflow_stages/research_loop) | sapientinc/PRAXIST | 0.1.0 | v1_stable | ✅ | — | ANTHROPIC_API_KEY, ANTHROPIC_AUTH_TOKEN, DEEPSEEK_API_KEY, GROQ_API_KEY, MISTRAL_API_KEY, OPENAI_API_KEY, OPENROUTER_API_KEY, ORCAROUTER_API_KEY, XAI_API_KEY | 2026-08-28 |
 | [reviewer_stub](https://github.com/sapientinc/PRAXIST/tree/HEAD/praxist/plugins/workflow_stages/reviewer_stub) | sapientinc/PRAXIST | 0.1.0 | v1_stable | — | — | no key | 2026-08-28 |
 

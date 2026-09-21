@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome" /></a>
-  <img src="https://img.shields.io/badge/praxist%20plugins-27-blueviolet" alt="Entry count" />
+  <img src="https://img.shields.io/badge/praxist%20plugins-32-blueviolet" alt="Entry count" />
   <img src="https://img.shields.io/github/last-commit/ZeroPointRepo/awesome-praxist-plugins" alt="Last commit" />
   <img src="https://img.shields.io/badge/praxist-v0.5.0-informational" alt="Upstream version" />
   <img src="https://img.shields.io/badge/status-unofficial-lightgrey" alt="Unofficial" />
@@ -23,7 +23,7 @@
 - [Good to know](#good-to-know)
 
 <!-- catalog-count:start -->
-- **Full catalog:** every verified Praxist plugin (27) in [CATALOG.md](CATALOG.md)
+- **Full catalog:** every verified Praxist plugin (32) in [CATALOG.md](CATALOG.md)
 <!-- catalog-count:end -->
 - **Machine-readable:** the same rows as data in [catalog.csv](catalog.csv) and [plugins.json](plugins.json)
 
